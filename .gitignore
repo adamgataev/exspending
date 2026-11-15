@@ -1,0 +1,58 @@
+# Built application files
+*.apk
+*.ap_
+*.aab
+*.dex
+
+# Java / Kotlin
+*.class
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+*.war
+*.ear
+*.log
+hs_err_pid*
+.kotlin/
+
+# Gradle
+.gradle/
+**/build/
+!**/src/**/build/
+
+# Local configuration (machine-specific SDK path, etc.)
+local.properties
+
+# Android Studio / IntelliJ
+*.iml
+.idea/
+.DS_Store
+captures/
+.externalNativeBuild/
+.cxx/
+*.navigation/
+*.hprof
+
+# Signing / secrets
+*.jks
+*.keystore
+*.key
+google-services.json
+.env
+.env.*
+!.env.example
+secrets.properties
+keystore.properties
+
+# NDK
+obj/
+
+# Profiling / crash dumps
+*.stackdump
+
+# OS
+Thumbs.db
+
+# Example personal finance data (keep folder via .gitkeep)
+examples/private/*
+!examples/private/.gitkeep
+/examples
