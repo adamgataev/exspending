@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" role="img" aria-label="Exspending">
+  <rect width="108" height="108" rx="24" fill="#121212"/>
+  <rect x="34" y="32" width="40" height="12" rx="2" fill="#6DDE8C"/>
+  <rect x="30" y="40" width="48" height="32" rx="6" fill="#121212" stroke="#42C3FF" stroke-width="2.5"/>
+  <rect x="56" y="49" width="22" height="14" rx="4" fill="#42C3FF"/>
+  <circle cx="67" cy="56" r="2.8" fill="#121212"/>
+  <text x="45.3" y="61" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">&#8364;X</text>
+</svg>

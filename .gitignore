@@ -32,10 +32,14 @@ captures/
 *.navigation/
 *.hprof
 
+# Cursor
+.cursor/
+
 # Signing / secrets
 *.jks
 *.keystore
 *.key
+app/keystore/
 google-services.json
 .env
 .env.*
@@ -52,7 +56,5 @@ obj/
 # OS
 Thumbs.db
 
-# Example personal finance data (keep folder via .gitkeep)
-examples/private/*
-!examples/private/.gitkeep
-/examples
+# Local scripts / venvs (not part of the app)
+scripts/

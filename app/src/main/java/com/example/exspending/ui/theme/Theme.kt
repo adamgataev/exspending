@@ -1,58 +1,46 @@
 package com.example.exspending.ui.theme
 
-import android.app.Activity
-import android.os.Build
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
-import androidx.compose.material3.dynamicLightColorScheme
-import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.graphics.Color
 
-private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
-)
-
-private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+private val ExspendingDarkColorScheme = darkColorScheme(
+    primary = AccentBlue,
+    onPrimary = AppBackground,
+    primaryContainer = Color(0xFF1A3A52),
+    onPrimaryContainer = TextPrimary,
+    secondary = TextSecondary,
+    onSecondary = AppBackground,
+    secondaryContainer = Color(0xFF2A2A2A),
+    onSecondaryContainer = TextPrimary,
+    tertiary = TransferAmber,
+    onTertiary = AppBackground,
+    background = AppBackground,
+    onBackground = TextPrimary,
+    surface = AppBackground,
+    onSurface = TextPrimary,
+    surfaceVariant = SurfaceElevated,
+    onSurfaceVariant = TextSecondary,
+    outline = OutlineMuted,
+    outlineVariant = Color(0xFF333333),
+    error = ExpenseRed,
+    onError = AppBackground,
+    errorContainer = Color(0xFF3D2929),
+    onErrorContainer = ExpenseRed,
+    inverseSurface = TextPrimary,
+    inverseOnSurface = AppBackground,
+    inversePrimary = Color(0xFF0B5A8C),
+    surfaceTint = AccentBlue,
+    scrim = Color.Black
 )
 
 @Composable
-fun ExspendingTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
-    content: @Composable () -> Unit
-) {
-    val colorScheme = when {
-        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
-            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
-        }
-
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
-    }
-
+fun ExspendingTheme(content: @Composable () -> Unit) {
     MaterialTheme(
-        colorScheme = colorScheme,
+        colorScheme = ExspendingDarkColorScheme,
         typography = Typography,
+        shapes = ExspendingShapes,
         content = content
     )
 }
