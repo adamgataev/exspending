@@ -42,9 +42,10 @@ android {
     buildTypes {
         release {
             signingConfig = signingConfigs.getByName("release")
+            // Full-app R8 (no packageScope). Scoped R8 without
+            // android.r8.gradual.support can break startup on device.
             optimization {
                 enable = true
-                packageScope = setOf("androidx.**", "kotlin.**", "kotlinx.**")
             }
         }
     }

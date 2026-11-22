@@ -66,6 +66,8 @@ abstract class ExspendingDatabase : RoomDatabase() {
                     "exspending.db"
                 )
                     .addMigrations(MIGRATION_1_2)
+                    // Prefer migration; if schema still mismatches (old debug installs), recreate.
+                    .fallbackToDestructiveMigration()
                     .build()
                     .also { instance = it }
             }
